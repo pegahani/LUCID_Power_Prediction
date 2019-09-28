@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 %\title{Fine-tuning on Simulated Data to Overcome the Gap with Observed data}
 \title{Overcome the Gap between Simulated and Observed Data in Industry 4.0\\ using Fine Tuning methods}
@@ -28,21 +29,19 @@ In this part we would present (@Dmitry: these are just our suggestions, you can 
 \end{itemize}
  
 \subsection{Machine Learning}
-\begin{itemize}
-	\item Explain how existed machine learning methods are effective for reducing the gap between simulated and observed data.
-    \item related works on neural networks, fine tuning and domain adaptation.
-    \item May be some related works on few shot learning. 
-    \item if there exists any, related works on the successful works on reducing the gab between  simulated and real data.
-\end{itemize}
-\section{Context}
+\input{Introduction_ml.tex}
 
 \section{Proposed approach}
+<<<<<<< HEAD
 \cite{•}
 \subsection{Curves Alignment}
 In this section, explain our approach (data preparation + dynamic time wrapping) for aligning two curves and motivation of introducing this measure as a loss function namely $l$(curve1, curve2). 
 \subsection{Classical ML methods on adaptive learning}
 \subsection{Various neural networks + fine tuning}
 \subsection{Learning on simulated Data and adaptation on real Data}
+=======
+\input{Proposed_approach.tex}
+
 \section{Experimental Setup}
 \subsection{GP2R Presentation}
 @Dmitry You can present the GP2R here or in another part of the paper if you have a suggestion.
@@ -55,15 +54,7 @@ In this section we will present the data from Machine Learning point of view. An
 \item NCSIMUL data and its power definition
 \end{itemize} 
 \subsection{Experimental Results}
-To be completed by Pegah. \\
-We follow a general approach for each pair of real vs ncsimul in our experiments:
-\begin{itemize}
-\item[1] Alignment between real and ncsimul curves
-\item[2] Train an ML method ($F$) on COM and test on real and measure the lost i.e. $l$(real, F(real)).
-\item[3] Train a model ($G$) on NCSIMUL + COM and check $l$(real, G(real))
-\item[4] Train a model ($H$) on NCSIMUL + COM + Real and check $l$(real, H(real)).
-\end{itemize}
-What we expect to get as experimental results is to get a better loss (l value) in this order: $2 < 3 < 4$. 
+\input{Experimental.tex} 
 \section{Conclusion and future works}
 
 \end{document}

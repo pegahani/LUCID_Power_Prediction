@@ -1,0 +1,9 @@
+To be completed by Pegah. \\
+We follow a general approach for each pair of real vs ncsimul in our experiments:
+\begin{itemize}
+\item[1] Alignment between real and ncsimul curves
+\item[2] Train an ML method ($F$) on COM and test on real and measure the lost i.e. $l$(real, F(real)).
+\item[3] Train a model ($G$) on NCSIMUL + COM and check $l$(real, G(real))
+\item[4] Train a model ($H$) on NCSIMUL + COM + Real and check $l$(real, H(real)).
+\end{itemize}
+What we expect to get as experimental results is to get a better loss (l value) in this order: $2 < 3 < 4$.
